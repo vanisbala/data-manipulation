@@ -1,0 +1,54 @@
+body {
+  background-color: rgb(132, 201, 233);
+  position: relative;
+  top: 20px;
+  left: auto;
+  text-align: center;
+}
+
+#subhead {
+  background-color: rgb(59, 107, 134);
+  text-align: center;
+  display: flex;
+  color: navy;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/* flex parent */
+#main {
+  display: flex;
+  background-color: rgb(85, 143, 177);
+  flex-direction: row;
+  max-height: 500px; /* set this in the parent to set scroll bar in the child if the content grows vertically*/
+  justify-content: space-around;
+  padding-bottom: 60px;
+  color: navy;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+/* 3 flex childs */
+#container {
+  position: relative;
+  width: 30%;
+  background-color: rgb(157, 196, 240);
+  /*flex-grow: 1; */
+  overflow-y: auto; /* This property enables the scroll bar vertically if the content is more than the set height in the parent*/
+}
+
+#topSalary {
+  position: relative;
+  width: 30%;
+  background-color: rgb(157, 196, 240);
+  /*flex-grow: 1;*/
+  overflow-y: auto;
+}
+
+#topEmployee {
+  position: relative;
+  width: 30%;
+  background-color: rgb(157, 196, 240);
+  /*flex-grow: 1;*/
+  overflow-y: auto;
+}

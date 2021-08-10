@@ -31,7 +31,6 @@
   const len = boston.data.length;
   function renderPosts(people, container) {
     let html = "";
-
     for (let i = 0; i < len; i++) {
       html +=
         '<li class="post">' +
@@ -62,7 +61,6 @@
         topSal[i][11] +
         "</h3>";
     }
-
     container.innerHTML = "<ul id = 'data'>" + html + "</ul>";
   }
 
@@ -70,7 +68,6 @@
     var topEmp = people.filter((item) => item[11] > 200000);
     console.log(topEmp);
     var Count = topEmp.length;
-
     let html = "";
     for (let i = 0; i < Count; i++) {
       html +=
@@ -82,7 +79,6 @@
         topEmp[i][11] +
         "</h3>";
     }
-
     container.innerHTML = "<ul id = 'data'>" + html + "</ul>";
   }
 
