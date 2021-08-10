@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <title>BostonEmployeeDataManipulation</title>
+  </head>
+  <body>
+    <h1>Boston Employees data Manipulation</h1>
+
+    <div id="subhead">
+      <h2 id="subh2">Employees and their Salary</h2>
+      <h2 id="subh2">Highly Paid Employees</h2>
+      <h2 id="subh2">Employees with 200k salary</h2>
+    </div>
+
+    <div id="main">
+      <div id="container"></div>
+      <div id="topSalary"></div>
+      <div id="topEmployee"></div>
+    </div>
+  </body>
+</html>
+
+<script src="./boston.js"></script>
+
+<script>
+  const people = boston.data;
+  const len = boston.data.length;
+  function renderPosts(people, container) {
+    let html = "";
+
+    for (let i = 0; i < len; i++) {
+      html +=
+        '<li class="post">' +
+        "<h2>" +
+        people[i][8] +
+        "</h2>" +
+        "<h3>" +
+        people[i][11] +
+        "</h3>";
+    }
+    container.innerHTML = "<ul id = 'data'>" + html + "</ul>";
+  }
+  function topFiveSalary(people, container) {
+    var topSal = people
+      .sort((a, b) => {
+        return b[11] - a[11];
+      })
+      .slice(0, 5);
+    var Count = topSal.length;
+    let html = "";
+    for (let i = 0; i < Count; i++) {
+      html +=
+        '<li class="post">' +
+        "<h2>" +
+        topSal[i][8] +
+        "</h2>" +
+        "<h3>" +
+        topSal[i][11] +
+        "</h3>";
+    }
+
+    container.innerHTML = "<ul id = 'data'>" + html + "</ul>";
+  }
+
+  function topEmployees(people, container) {
+    var topEmp = people.filter((item) => item[11] > 200000);
+    console.log(topEmp);
+    var Count = topEmp.length;
+
+    let html = "";
+    for (let i = 0; i < Count; i++) {
+      html +=
+        '<li class="post">' +
+        "<h2>" +
+        topEmp[i][8] +
+        "</h2>" +
+        "<h3>" +
+        topEmp[i][11] +
+        "</h3>";
+    }
+
+    container.innerHTML = "<ul id = 'data'>" + html + "</ul>";
+  }
+
+  renderPosts(people, document.getElementById("container"));
+  topFiveSalary(people, document.getElementById("topSalary"));
+  topEmployees(people, document.getElementById("topEmployee"));
+</script>
