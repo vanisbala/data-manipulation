@@ -8,7 +8,7 @@ Manipulation of Boston Employees JSON data
 - Displaying the Employees who get more than $200k
 
 ## Installation
-git clone https://github.com/vanisbala/randomballmove
+git clone https://github.com/vanisbala/data-manipulation
 
 ## Built with
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
@@ -16,7 +16,7 @@ git clone https://github.com/vanisbala/randomballmove
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/Javascript)
 
 ## Deployed Link
-- [See live Site](https://vanisbala.github.io/randomballmove/)
+- [See live Site]( https://vanisbala.github.io/data-manipulation/)
 
 
 ## Author
